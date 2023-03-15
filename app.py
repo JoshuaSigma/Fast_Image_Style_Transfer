@@ -113,8 +113,12 @@ with st.container():
     st.caption("Based on the model code in magenta and the publication: Exploring the structure of a real-time, arbitrary neural artistic stylization network. Golnaz Ghiasi, Honglak Lee, Manjunath Kudlur, Vincent Dumoulin, Jonathon Shlens, Proceedings of the British Machine Vision Conference (BMVC), 2017.")
 
 with st.container():
+    st.header("Transfer the style of one photo to another")
+    st.write("Style Transfering involves taking the style of one image, usually a painting or digital art piece, and transferring that style to a target photo. This model was trained on approximately 80,000 paintings and 6,000 textures. And while it is limited to one style, it performs in real-time.")
+
+with st.container():
     st.header("On device style transfer")
-    st.write("The left and middle example pictures are both sourced externally. The last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
+    st.write("The first and second images above are normal downloaded images. However, the last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
 
 with st.container():
     st.write("First lets define our preprocessing functions.")
@@ -129,7 +133,7 @@ with st.container():
     st.code(magic, language='python')
 
 st.header("Let's try it out!")
-st.write("Add a picture you want altered on the left (top if on small screen), then add a style image sized 256 x 256 to get a stylized image below and a couple of sliders to change the pooling layer.")
+st.write("Add a picture you want altered on the left (top if on small screen), then add a style image to get a stylized image below and a couple of sliders to change the pooling layer. The style image is designed to work at 256 x 256, but should take any image size.")
 
 # Stylize content image with given style image.
 # This is pretty fast within a few milliseconds on a GPU.
