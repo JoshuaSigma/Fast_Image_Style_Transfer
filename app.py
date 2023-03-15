@@ -1,4 +1,3 @@
-import functools
 import os
 
 import numpy as np
@@ -23,7 +22,6 @@ def crop_center(image):
       image, offset_y, offset_x, new_shape, new_shape)
   return image
 
-@functools.lru_cache(maxsize=None)
 def load_image(image_url, image_size=(256, 256), preserve_aspect_ratio=True):
   """Loads and preprocesses images."""
   # Cache image file locally.

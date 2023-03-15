@@ -1,4 +1,3 @@
-functools
 numpy
 tensorflow
 tensorflow_hub
