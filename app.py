@@ -33,7 +33,7 @@ def load_image(image_url, image_size=(256, 256), preserve_aspect_ratio=True):
 content_image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Golden_Gate_Bridge_from_Battery_Spencer.jpg/640px-Golden_Gate_Bridge_from_Battery_Spencer.jpg'  # @param {type:"string"}
 style_image_url = 'https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg'  # @param {type:"string"}
 output_image_size = 384  # @param {type:"integer"}
-sample_image_0 = 'https://photos.google.com/photo/AF1QipOpPH4PFCRNNl9lRmjfC85CeiQQEVLsnWIzoIev'
+sample_image_0 = 'https://i.ibb.co/SwNk9PZ/20230217-160027.jpg'
 
 # The content image size can be arbitrary.
 content_img_size = (output_image_size, output_image_size)
