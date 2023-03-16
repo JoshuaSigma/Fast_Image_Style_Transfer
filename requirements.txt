@@ -2,4 +2,3 @@ numpy
 tensorflow
 tensorflow_hub
 streamlit
-pandas
