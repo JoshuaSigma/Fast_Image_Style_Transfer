@@ -50,6 +50,7 @@ content_img_size = (output_image_size, output_image_size)
 # recommended image size for the style image (though, other sizes work as 
 # well but will lead to different results).
 style_img_size = (256, 256)  # Recommended to keep it at 256.
+sample_img_size = (256, 256)
 
 content_image = load_image(content_image_url, content_img_size)
 style_image = load_image(style_image_url, style_img_size)
@@ -131,7 +132,7 @@ with st.container():
 with st.container():
     st.header("On device style transfer")
     st.write("The first and second images above are normal downloaded images. However, the last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
-
+    
 with st.container():
     st.title("Examples")
     col10, col11, col12 = st.columns(3)
@@ -139,14 +140,17 @@ with st.container():
     col16, col17, col18 = st.columns(3)
     col10.image(sample_image_0)
     col11.image(picasso_violin)
-    # col12.image()
     col13.image(sample_image_1)
     col14.image(munch_scream)
-    # col15.image()
     col16.image(sample_image_2)
     col17.image(van_gogh_starry_night)
-    # col18.image()
 
+    output_sample_0 = hub_module(tf.constant(load_image(sample_image_0, sample_img_size)), tf.constant(load_image(picasso_violin, sample_img_size)))
+    col12.image(output_sample_0[0].numpy())
+    output_sample_1 = hub_module(tf.constant(load_image(sample_image_1, sample_img_size)), tf.constant(load_image(munch_scream, sample_img_size)))
+    col15.image(output_sample_1[0].numpy())
+    output_sample_2 = hub_module(tf.constant(load_image(sample_image_2, sample_img_size)), tf.constant(load_image(van_gogh_starry_night, sample_img_size)))
+    col18.image(output_sample_2[0].numpy())
 with st.container():
     st.title("Let's examine the code")
 
