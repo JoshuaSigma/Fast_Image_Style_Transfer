@@ -5,11 +5,11 @@ import tensorflow as tf
 import tensorflow_hub as hub
 
 import streamlit as st
-import pandas as pd
 
-print("TF Version: ", tf.__version__) # st.info ?
+print("TF Version: ", tf.__version__)
 print("TF Hub version: ", hub.__version__)
 print("Eager mode enabled: ", tf.executing_eagerly())
+print("Numpy version: ", np.__version__)
 
 # Fx's ---------------------------------------------------------------------------------
 def crop_center(image):
