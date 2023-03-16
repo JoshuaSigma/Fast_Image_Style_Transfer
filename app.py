@@ -33,7 +33,16 @@ def load_image(image_url, image_size=(256, 256), preserve_aspect_ratio=True):
 content_image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Golden_Gate_Bridge_from_Battery_Spencer.jpg/640px-Golden_Gate_Bridge_from_Battery_Spencer.jpg'  # @param {type:"string"}
 style_image_url = 'https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg'  # @param {type:"string"}
 output_image_size = 384  # @param {type:"integer"}
+
+# Sample imgs
 sample_image_0 = 'https://i.ibb.co/SwNk9PZ/20230217-160027.jpg'
+sample_image_1 = 'https://i.ibb.co/MDwbXh9/20230301-080842.jpg'
+sample_image_2 = 'https://i.ibb.co/mSQWhzn/20230217-163807.jpg'
+
+# Style sample imgs
+picasso_violin='https://upload.wikimedia.org/wikipedia/en/3/3c/Pablo_Picasso%2C_1911-12%2C_Violon_%28Violin%29%2C_oil_on_canvas%2C_Kr%C3%B6ller-M%C3%BCller_Museum%2C_Otterlo%2C_Netherlands.jpg'
+munch_scream='https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg'
+van_gogh_starry_night='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1024px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg'
 
 # The content image size can be arbitrary.
 content_img_size = (output_image_size, output_image_size)
@@ -129,6 +138,12 @@ with st.container():
     col13, col14, col15 = st.columns(3)
     col16, col17, col18 = st.columns(3)
     col10.image(sample_image_0)
+
+
+    col13.image(sample_image_1)
+
+
+    col16.image(sample_image_2)
 
 with st.container():
     st.title("Let's examine the code")
