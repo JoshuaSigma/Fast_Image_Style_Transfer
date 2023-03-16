@@ -33,6 +33,7 @@ def load_image(image_url, image_size=(256, 256), preserve_aspect_ratio=True):
 content_image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Golden_Gate_Bridge_from_Battery_Spencer.jpg/640px-Golden_Gate_Bridge_from_Battery_Spencer.jpg'  # @param {type:"string"}
 style_image_url = 'https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg'  # @param {type:"string"}
 output_image_size = 384  # @param {type:"integer"}
+sample_image_0 = 'https://images2.imgbox.com/db/e7/8J8WKdMi_o.jpg'
 
 # The content image size can be arbitrary.
 content_img_size = (output_image_size, output_image_size)
@@ -121,6 +122,13 @@ with st.container():
 with st.container():
     st.header("On device style transfer")
     st.write("The first and second images above are normal downloaded images. However, the last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
+
+with st.container():
+    st.title("Examples")
+    col10, col11, col12 = st.columns(3)
+    col13, col14, col15 = st.columns(3)
+    col16, col17, col18 = st.columns(3)
+    col10.image(sample_image_0)
 
 with st.container():
     st.title("Let's examine the code")
