@@ -100,13 +100,6 @@ imports = '''import os
 import numpy as np
 import tensorflow as tf
 import tensorflow_hub as hub
-
-import streamlit as st
-
-print("TF Version: ", tf.__version__)
-print("TF Hub version: ", hub.__version__)
-print("Eager mode enabled: ", tf.executing_eagerly())
-print("Numpy version: ", np.__version__)
 '''
 
 # Document Render ----------------------------------------------------------------------------------------
@@ -133,11 +126,6 @@ with st.container():
     st.header("Import Packages")
     st.write("We start by importing the necessary packages. Make sure your environment has these dependencies installed. ")
     st.code(imports, language='python')
-    with st.echo():
-        print("TF Version: ", tf.__version__)
-        print("TF Hub version: ", hub.__version__)
-        print("Eager mode enabled: ", tf.executing_eagerly())
-        print("Numpy version: ", np.__version__)
 
 with st.container():
     st.write("Next, Lets define our preprocessing functions.")
