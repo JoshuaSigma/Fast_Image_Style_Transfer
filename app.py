@@ -138,12 +138,14 @@ with st.container():
     col13, col14, col15 = st.columns(3)
     col16, col17, col18 = st.columns(3)
     col10.image(sample_image_0)
-
-
+    col11.image(picasso_violin)
+    # col12.image()
     col13.image(sample_image_1)
-
-
+    col14.image(munch_scream)
+    # col15.image()
     col16.image(sample_image_2)
+    col17.image(van_gogh_starry_night)
+    # col18.image()
 
 with st.container():
     st.title("Let's examine the code")
