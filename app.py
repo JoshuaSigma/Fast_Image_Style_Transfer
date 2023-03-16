@@ -6,11 +6,6 @@ import tensorflow_hub as hub
 
 import streamlit as st
 
-print("TF Version: ", tf.__version__)
-print("TF Hub version: ", hub.__version__)
-print("Eager mode enabled: ", tf.executing_eagerly())
-print("Numpy version: ", np.__version__)
-
 # Fx's ---------------------------------------------------------------------------------
 def crop_center(image):
   """Returns a cropped square image."""
@@ -100,6 +95,20 @@ outputs = hub_module(tf.constant(content_image), tf.constant(style_image))
 stylized_image = outputs[0]
 '''
 
+imports = '''import os
+
+import numpy as np
+import tensorflow as tf
+import tensorflow_hub as hub
+
+import streamlit as st
+
+print("TF Version: ", tf.__version__)
+print("TF Hub version: ", hub.__version__)
+print("Eager mode enabled: ", tf.executing_eagerly())
+print("Numpy version: ", np.__version__)
+'''
+
 # Document Render ----------------------------------------------------------------------------------------
 
 # Title
@@ -121,7 +130,17 @@ with st.container():
     st.write("The first and second images above are normal downloaded images. However, the last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
 
 with st.container():
-    st.write("First lets define our preprocessing functions.")
+    st.header("Import Packages")
+    st.write("We start by importing the necessary packages. Make sure your environment has these dependencies installed. ")
+    st.code(imports, language='python')
+    with st.echo():
+        print("TF Version: ", tf.__version__)
+        print("TF Hub version: ", hub.__version__)
+        print("Eager mode enabled: ", tf.executing_eagerly())
+        print("Numpy version: ", np.__version__)
+
+with st.container():
+    st.write("Next, Lets define our preprocessing functions.")
     st.code(fxs, language='python')
 
 with st.container():
