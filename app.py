@@ -35,7 +35,7 @@ style_image_url = 'https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great
 output_image_size = 384  # @param {type:"integer"}
 
 # Sample imgs
-sample_image_0 = 'https://i.ibb.co/SwNk9PZ/20230217-160027.jpg'
+sample_image_0 = 'https://images.pexels.com/photos/13249360/pexels-photo-13249360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 sample_image_1 = 'https://i.ibb.co/MDwbXh9/20230301-080842.jpg'
 sample_image_2 = 'https://i.ibb.co/mSQWhzn/20230217-163807.jpg'
 
