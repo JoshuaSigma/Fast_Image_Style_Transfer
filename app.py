@@ -123,21 +123,24 @@ with st.container():
     st.write("The first and second images above are normal downloaded images. However, the last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
 
 with st.container():
-    st.header("Import Packages")
-    st.write("We start by importing the necessary packages. Make sure your environment has these dependencies installed. ")
-    st.code(imports, language='python')
+    st.title("Let's examine the code")
 
-with st.container():
-    st.write("Next, Lets define our preprocessing functions.")
-    st.code(fxs, language='python')
+    with st.container():
+        st.header("Import Packages")
+        st.write("We start by importing the necessary packages. Make sure your environment has these dependencies installed. ")
+        st.code(imports, language='python')
 
-with st.container():
-    st.write("Then we grab some images from the web. The image that is being altered, content image, can be of arbitrary size. Since the model was trained on 256 x 256 images, it works best with 256. We are also going to add an average pooling layer that you will be able to play around with below. For now its set at Kernel size = [3,3] and stride = [1,1]")
-    st.code(example, language='python')
+    with st.container():
+        st.write("Next, Lets define our preprocessing functions.")
+        st.code(fxs, language='python')
 
-with st.container():
-    st.write("Now for the magic. We simply load the model and process the output image.")
-    st.code(magic, language='python')
+    with st.container():
+        st.write("Then we grab some images from the web. The image that is being altered, content image, can be of arbitrary size. Since the model was trained on 256 x 256 images, it works best with 256. We are also going to add an average pooling layer that you will be able to play around with below. For now its set at Kernel size = [3,3] and stride = [1,1]")
+        st.code(example, language='python')
+
+    with st.container():
+        st.write("Now for the magic. We simply load the model and process the output image.")
+        st.code(magic, language='python')
 
 st.header("Let's try it out!")
 st.write("Add a picture you want altered on the left (top if on small screen), then add a style image to get a stylized image below and a couple of sliders to change the pooling layer. The style image is designed to work at 256 x 256, but should take any image size.")
