@@ -40,7 +40,7 @@ sample_image_1 = 'https://i.ibb.co/MDwbXh9/20230301-080842.jpg'
 sample_image_2 = 'https://i.ibb.co/mSQWhzn/20230217-163807.jpg'
 
 # Style sample imgs
-picasso_violin='https://upload.wikimedia.org/wikipedia/en/3/3c/Pablo_Picasso%2C_1911-12%2C_Violon_%28Violin%29%2C_oil_on_canvas%2C_Kr%C3%B6ller-M%C3%BCller_Museum%2C_Otterlo%2C_Netherlands.jpg'
+amadeo_cardoso='https://upload.wikimedia.org/wikipedia/commons/7/7d/Amadeo_de_Souza-Cardoso%2C_1915_-_Landscape_with_black_figure.jpg'
 munch_scream='https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg'
 van_gogh_starry_night='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1024px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg'
 
@@ -139,13 +139,13 @@ with st.container():
     col13, col14, col15 = st.columns(3)
     col16, col17, col18 = st.columns(3)
     col10.image(sample_image_0)
-    col11.image(picasso_violin)
+    col11.image(amadeo_cardoso)
     col13.image(sample_image_1)
     col14.image(munch_scream)
     col16.image(sample_image_2)
     col17.image(van_gogh_starry_night)
 
-    output_sample_0 = hub_module(tf.constant(load_image(sample_image_0, sample_img_size)), tf.constant(load_image(picasso_violin, sample_img_size)))
+    output_sample_0 = hub_module(tf.constant(load_image(sample_image_0, sample_img_size)), tf.constant(load_image(amadeo_cardoso, sample_img_size)))
     col12.image(output_sample_0[0].numpy())
     output_sample_1 = hub_module(tf.constant(load_image(sample_image_1, sample_img_size)), tf.constant(load_image(munch_scream, sample_img_size)))
     col15.image(output_sample_1[0].numpy())
