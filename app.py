@@ -6,6 +6,10 @@ import tensorflow_hub as hub
 
 import streamlit as st
 
+# Sidebar ------------------------------------------------------------------------------
+
+st.sidebar.write("[Instagram Style Filters](https://joshuasigma-instagram-filters-app-2aine9.streamlit.app/)")
+
 # Fx's ---------------------------------------------------------------------------------
 def crop_center(image):
   """Returns a cropped square image."""
