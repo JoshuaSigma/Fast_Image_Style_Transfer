@@ -7,8 +7,17 @@ import tensorflow_hub as hub
 import streamlit as st
 
 # Sidebar ------------------------------------------------------------------------------
+with st.sidebar:
+    with st.container():
+        # Put bio here with markdown
+        st.empty()
 
-st.sidebar.write("[Instagram Style Filters](https://joshuasigma-instagram-filters-app-2aine9.streamlit.app/)")
+    st.subheader('Natural Language Processing')
+    st.write("Text Classification (Emotion)")
+    st.empty()
+    st.subheader("Imaging")
+    st.write("[Fast Style Transfer](https://joshuasigma-fast-image-style-transfer-app-23kl7l.streamlit.app/)")
+    st.write("[Fast Instagram Filters with Pygram](https://joshuasigma-instagram-filters-app-2aine9.streamlit.app/)")
 
 # Fx's ---------------------------------------------------------------------------------
 def crop_center(image):
