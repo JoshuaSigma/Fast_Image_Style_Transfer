@@ -139,15 +139,15 @@ with st.container():
     st.caption("Based on the model code in magenta and the publication: Exploring the structure of a real-time, arbitrary neural artistic stylization network. Golnaz Ghiasi, Honglak Lee, Manjunath Kudlur, Vincent Dumoulin, Jonathon Shlens, Proceedings of the British Machine Vision Conference (BMVC), 2017.")
 
 with st.container():
-    st.header("Transfer the style of one photo to another")
+    st.subheader("Transfer the style of one photo to another")
     st.write("Style Transfering involves taking the style of one image, usually a painting or digital art piece, and transferring that style to a target photo. This model was trained on approximately 80,000 paintings and 6,000 textures. And while it is limited to one style, it performs in real-time.")
 
 with st.container():
-    st.header("On device style transfer")
+    st.subheader("On device style transfer")
     st.write("The first and second images above are normal downloaded images. However, the last image is produced using magenta in real-time on this device. Code and upload tester below. Style image works best at 256 x 256.")
     
 with st.container():
-    st.title("Examples")
+    st.header("Examples")
     col10, col11, col12 = st.columns(3)
     col13, col14, col15 = st.columns(3)
     col16, col17, col18 = st.columns(3)
@@ -165,10 +165,10 @@ with st.container():
     output_sample_2 = hub_module(tf.constant(load_image(sample_image_2, sample_img_size)), tf.constant(load_image(van_gogh_starry_night, sample_img_size)))
     col18.image(output_sample_2[0].numpy())
 with st.container():
-    st.title("Let's examine the code")
+    st.header("Let's examine the code")
 
     with st.container():
-        st.header("Import Packages")
+        st.subheader("Import Packages")
         st.write("We start by importing the necessary packages. Make sure your environment has these dependencies installed. ")
         st.code(imports, language='python')
 
