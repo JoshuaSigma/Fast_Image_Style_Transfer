@@ -13,7 +13,7 @@ with st.sidebar:
         st.empty()
 
     st.subheader('Natural Language Processing')
-    st.write("Text Classification (Emotion)")
+    st.write("[Text Classification (Emotion)](https://joshuasigma-tce-streamlit-app-0j7jjl.streamlit.app/)")
     st.empty()
     st.subheader("Imaging")
     st.write("[Fast Style Transfer](https://joshuasigma-fast-image-style-transfer-app-23kl7l.streamlit.app/)")
